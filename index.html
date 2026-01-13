@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maimun_Nahar_Nuha_Resume_Final</title>
+    <title>Maimun_Nahar_Nuha_Resume_Architected</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -15,74 +15,62 @@
             color: #000000;
         }
 
-        /* STRICT SINGLE PAGE CONTAINER */
         .resume-container {
             background: white;
             width: 8.5in;
             height: 11in;
-            margin: 10px auto;
-            padding: 0.35in 0.6in;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            padding: 0.5in 0.7in;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            overflow: hidden; /* Prevents 2nd page creation */
+            overflow: hidden;
         }
 
         h1, h2, h3, p, li, span {
             color: #000000 !important;
-            line-height: 1.2; /* Ultra-tight line spacing */
         }
 
-        h1 { font-family: 'Playfair Display', serif; line-height: 1.0; }
+        h1 { font-family: 'Playfair Display', serif; }
         h2 { font-family: 'Playfair Display', serif; }
 
         .section-header {
-            border-bottom: 1px solid #000;
-            margin-top: 10px;
-            margin-bottom: 6px;
-            padding-bottom: 1px;
+            border-bottom: 2px solid #000;
+            margin-top: 14px;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-size: 1rem;
+            letter-spacing: 0.08em;
+            font-size: 1.1rem;
             font-weight: 700;
         }
 
         .print-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background: #000;
             color: #fff !important;
-            padding: 10px 20px;
-            border-radius: 50px;
+            padding: 12px 24px;
+            border-radius: 8px;
             font-weight: 600;
             z-index: 1000;
             cursor: pointer;
-            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         @media print {
-            @page { 
-                size: letter; 
-                margin: 0; 
-            }
-            body { 
-                background: white !important; 
-                padding: 0 !important; 
-            }
+            @page { size: letter; margin: 0; }
+            body { background: white !important; padding: 0 !important; }
             .no-print { display: none !important; }
             .resume-container {
                 width: 8.5in !important;
                 height: 11in !important;
                 margin: 0 !important;
-                padding: 0.35in 0.6in !important;
+                padding: 0.5in 0.7in !important;
                 box-shadow: none !important;
-                display: flex !important;
-                /* Force scale to fit if browser adds margins */
-                transform: scale(0.98);
-                transform-origin: top center;
+                transform: scale(1.0);
             }
         }
 
@@ -99,13 +87,13 @@
 </head>
 <body>
 
-    <button class="print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+    <button class="print-btn no-print" onclick="window.print()">Download Professional PDF</button>
 
     <div class="resume-container">
-        <header class="text-center mb-4">
-            <h1 class="text-4xl font-bold mb-1">MAIMUN NAHAR NUHA</h1>
-            <div class="flex justify-center gap-4 text-[11px] font-medium uppercase tracking-tight">
-                <span>Scarborough, Toronto</span>
+        <header class="text-center mb-6">
+            <h1 class="text-5xl font-bold mb-3 tracking-tight">MAIMUN NAHAR NUHA</h1>
+            <div class="flex justify-center gap-6 text-[13px] font-medium uppercase tracking-widest text-gray-800">
+                <span>Toronto, ON</span>
                 <span>•</span>
                 <span>438-921-4887</span>
                 <span>•</span>
@@ -113,9 +101,9 @@
             </div>
         </header>
 
-        <section class="mb-3">
-            <h2 class="section-header">Professional Profile</h2>
-            <p class="text-[12px]">
+        <section>
+            <h2 class="section-header">Executive Summary</h2>
+            <p class="text-[14px] leading-relaxed">
                 Poised and adaptable hospitality professional with a dedicated focus on the Canadian guest experience. 
                 Proven ability to maintain professional maturity and efficiency in high-pressure environments. 
                 Expert at orchestrating seamless service and delivering exceptional multitasking within top-tier 
@@ -123,59 +111,59 @@
             </p>
         </section>
 
-        <section class="mb-3">
+        <section>
             <h2 class="section-header">Professional Experience</h2>
             
-            <div class="mb-2">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-[13px] uppercase">Food & Beverage Server</h3>
-                    <span class="text-[9px] font-bold">MONTREAL, QC</span>
+            <div class="mb-5">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="font-bold text-lg uppercase">Food & Beverage Server</h3>
+                    <span class="text-xs font-bold italic">Montreal, QC</span>
                 </div>
-                <p class="text-[11px] font-semibold italic mb-0.5">Esto Molivos | Resto Cabasil | Trattoria Tevere</p>
-                <ul class="list-disc ml-4 text-[12px] space-y-0">
+                <p class="text-[13px] font-semibold mb-2 italic">Esto Molivos | Resto Cabasil | Trattoria Tevere</p>
+                <ul class="list-disc ml-5 text-[14px] space-y-1">
                     <li>Orchestrated attentive guest service to ensure a premium dining atmosphere.</li>
                     <li>Expedited complex orders with precision during peak high-volume service windows.</li>
                     <li>Mastered team synchronization to optimize service flow and guest satisfaction.</li>
                 </ul>
             </div>
 
-            <div class="mb-2">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-[13px] uppercase">Dining Room Assistant</h3>
-                    <span class="text-[9px] font-bold">MONTREAL, QC</span>
+            <div class="mb-5">
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="font-bold text-lg uppercase">Dining Room Assistant</h3>
+                    <span class="text-xs font-bold italic">Montreal, QC</span>
                 </div>
-                <p class="text-[11px] font-semibold italic mb-0.5">Greek Town Grill</p>
-                <ul class="list-disc ml-4 text-[12px] space-y-0">
+                <p class="text-[13px] font-semibold mb-2 italic">Greek Town Grill</p>
+                <ul class="list-disc ml-5 text-[14px] space-y-1">
                     <li>Facilitated rapid table turnovers while upholding rigorous cleanliness standards.</li>
                     <li>Proactively supported the service team to maintain a fluid guest experience.</li>
                 </ul>
             </div>
 
-            <div class="mb-0">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-[13px] uppercase">Language Instructor</h3>
-                    <span class="text-[9px] font-bold">BANGLADESH</span>
+            <div>
+                <div class="flex justify-between items-baseline mb-1">
+                    <h3 class="font-bold text-lg uppercase">Language Instructor</h3>
+                    <span class="text-xs font-bold italic">Bangladesh</span>
                 </div>
-                <p class="text-[11px] font-semibold italic mb-0.5">Merseyside Consultancy</p>
-                <ul class="list-disc ml-4 text-[12px] space-y-0">
+                <p class="text-[13px] font-semibold mb-2 italic text-gray-700">Merseyside Consultancy</p>
+                <ul class="list-disc ml-5 text-[14px] space-y-1">
                     <li>Developed high-level communication and public presentation techniques.</li>
                     <li>Coached diverse learners in linguistic clarity and professional confidence.</li>
                 </ul>
             </div>
         </section>
 
-        <div class="grid grid-cols-2 gap-x-8 mb-3">
+        <div class="grid grid-cols-2 gap-x-12 mt-4">
             <section>
                 <h2 class="section-header">Education</h2>
-                <div class="text-[12px]">
-                    <p class="font-bold leading-tight">Herzing College, Canada</p>
-                    <p class="leading-tight">ACS — Computer Aided Design & Drafting</p>
-                    <p class="italic text-[10px]">Sept 2023 — July 2025</p>
+                <div class="text-[14px]">
+                    <p class="font-bold">Herzing College, Canada</p>
+                    <p>ACS — Computer Aided Design & Drafting</p>
+                    <p class="italic text-sm text-gray-700">2023 — 2025</p>
                 </div>
             </section>
             <section>
                 <h2 class="section-header">Core Competencies</h2>
-                <ul class="text-[11.5px] space-y-0">
+                <ul class="text-[14px] space-y-1">
                     <li>• Customer Service Excellence</li>
                     <li>• POS Systems & Cash Management</li>
                     <li>• Multitasking & Conflict Resolution</li>
@@ -183,31 +171,30 @@
             </section>
         </div>
 
-        <section class="mb-3">
+        <section class="mt-4">
             <h2 class="section-header">Languages</h2>
-            <div class="text-[12px] flex gap-6">
+            <div class="text-[14px] flex gap-12 font-medium">
                 <span><strong>English:</strong> Fluent</span>
                 <span><strong>Bengali:</strong> Native</span>
                 <span><strong>French:</strong> Basic</span>
             </div>
         </section>
 
-        <section class="mt-auto pt-2">
-            <h2 class="section-header">Work Availability</h2>
-            <div class="flex justify-between text-[11.5px] border-t border-black pt-2 px-1">
-                <div>
-                    <span class="font-bold uppercase text-[9px] block">Mon - Wed</span>
-                    <span>After 6:00 PM</span>
+        <section class="mt-auto pt-6 border-t-2 border-black">
+            <div class="flex justify-between items-center px-4">
+                <div class="text-center">
+                    <span class="block text-[11px] font-bold uppercase tracking-widest text-gray-500 mb-1">Mon - Wed</span>
+                    <span class="text-[14px] font-semibold italic">After 6:00 PM</span>
                 </div>
-                <div class="border-l border-gray-400 h-6"></div>
-                <div>
-                    <span class="font-bold uppercase text-[9px] block">Thursday</span>
-                    <span>After 4:00 PM</span>
+                <div class="h-8 w-px bg-gray-300"></div>
+                <div class="text-center">
+                    <span class="block text-[11px] font-bold uppercase tracking-widest text-gray-500 mb-1">Thursday</span>
+                    <span class="text-[14px] font-semibold italic">After 4:00 PM</span>
                 </div>
-                <div class="border-l border-gray-400 h-6"></div>
-                <div>
-                    <span class="font-bold uppercase text-[9px] block">Fri - Sun</span>
-                    <span class="font-bold">Open Availability (24/7)</span>
+                <div class="h-8 w-px bg-gray-300"></div>
+                <div class="text-center">
+                    <span class="block text-[11px] font-bold uppercase tracking-widest text-gray-500 mb-1">Fri - Sun</span>
+                    <span class="text-[14px] font-bold">Open Availability</span>
                 </div>
             </div>
         </section>
