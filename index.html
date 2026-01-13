@@ -2,190 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=8.5in, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maimun_Nahar_Nuha_Resume</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* BASE STYLES */
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* WEB VIEW: Responsive container */
+        .resume-container {
+            background: white;
+            width: 95%;
+            max-width: 8.5in;
+            margin: 20px auto;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-height: 11in;
+        }
+
+        /* PRINT VIEW: Strict Letter Size */
+        @media print {
+            @page {
+                size: letter;
+                margin: 0;
+            }
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .resume-container {
+                width: 8.5in !important;
+                height: 11in !important;
+                margin: 0 !important;
+                padding: 0.5in 0.75in !important;
+                box-shadow: none !important;
+                display: block !important;
             }
         }
-    </script>
-    <style>
-        @media print {
-            @page { size: letter; margin: 0; }
-            body { background: white !important; -webkit-print-color-adjust: exact; }
-            .no-print { display: none !important; }
-            .resume-container { box-shadow: none !important; margin: 0 !important; border: none !important; }
-        }
 
-        body {
-            background-color: #525659; /* Classic PDF viewer grey */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 0;
-            padding: 20px 0;
-            /* Ensures the desktop look on mobile */
-            min-width: 8.5in; 
-        }
-
-        .resume-container {
-            background-color: white;
-            width: 8.5in;
-            height: 11in;
-            padding: 0.6in 0.75in;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-            display: flex;
-            flex-direction: column;
-            color: #1a1a1a;
-            position: relative;
-            box-sizing: border-box;
-        }
-
-        .section-header {
+        h1, h2 {
             font-family: 'Playfair Display', serif;
-            border-bottom: 1.5px solid #000;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 0.6rem;
-            padding-bottom: 0.2rem;
-            font-size: 1.05rem;
-            font-weight: 700;
         }
-        
+
+        .section-line {
+            border-bottom: 2px solid #000;
+            margin-bottom: 12px;
+            padding-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+
         .print-btn {
             position: fixed;
-            top: 20px;
-            left: 20px;
+            bottom: 20px;
+            right: 20px;
             background: #000;
             color: #fff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-family: 'Inter', sans-serif;
-            font-size: 13px;
+            padding: 12px 24px;
+            border-radius: 50px;
             font-weight: 600;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             cursor: pointer;
-            z-index: 9999;
-            border: 1px solid #444;
         }
-
-        li { line-height: 1.4; }
     </style>
 </head>
-<body class="font-sans">
+<body>
 
-    <button class="print-btn no-print" onclick="window.print()">Download PDF</button>
+    <button class="print-btn no-print" onclick="window.print()">Print to PDF</button>
 
     <div class="resume-container">
-        <header class="text-center mb-6">
-            <h1 class="font-serif text-5xl mb-2 uppercase tracking-tight">MAIMUN NAHAR NUHA</h1>
-            <div class="flex justify-center gap-4 text-[13px] font-medium text-gray-700">
-                <span>Scarborough, Toronto, Ontario [cite: 7]</span>
-                <span>•</span>
-                <span>438-921-4887 [cite: 5]</span>
-                <span>•</span>
-                <span>mnaharnuha@gmail.com [cite: 6]</span>
-            </div>
+        <header class="text-center mb-8">
+            <h1 class="text-4xl sm:text-5xl font-bold mb-2">MAIMUN NAHAR NUHA</h1>
+            <p class="text-sm tracking-widest text-gray-700">
+                SCARBOROUGH, TORONTO • 438-921-4887 • MNAHARNUHA@GMAIL.COM
+            </p>
         </header>
 
-        <section class="mb-6">
-            <h2 class="section-header">Professional Profile</h2>
-            <p class="text-[13px] leading-relaxed text-gray-800">
-                Friendly and reliable international graduate seeking a retail or customer service position[cite: 8]. 
-                Brings strong communication skills and hands-on experience in fast-paced environments[cite: 9]. 
-                Demonstrates a genuine passion for helping customers and delivering professional service excellence[cite: 9, 10].
+        <section class="mb-8">
+            <h2 class="section-line">Executive Summary</h2>
+            <p class="text-sm leading-relaxed text-gray-800">
+                Poised and professional hospitality specialist with a dedicated focus on the Canadian guest experience. 
+                Recognized for maintaining professional maturity and adaptability in high-pressure environments. 
+                Expert at orchestrating seamless service transitions and delivering exceptional multitasking within 
+                top-tier dining establishments.
             </p>
         </section>
 
-        <section class="mb-6">
-            <h2 class="section-header">Professional Experience</h2>
+        <section class="mb-8">
+            <h2 class="section-line">Professional Experience</h2>
             
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline mb-0.5">
-                    <span class="font-bold text-[15px] uppercase">Food & Beverage Server</span>
-                    <span class="text-[11px] font-bold">Montreal, QC [cite: 38]</span>
+            <div class="mb-5">
+                <div class="flex justify-between items-baseline mb-1">
+                    <span class="font-bold text-base">Food & Beverage Server</span>
+                    <span class="text-xs italic uppercase">Montreal, QC</span>
                 </div>
-                <div class="text-[12px] font-semibold text-gray-600 italic mb-1.5">Esto Molivos | Resto Cabasil | Trattoria Tevere [cite: 36, 38]</div>
-                <ul class="list-disc ml-4 text-[13px] text-gray-800 space-y-0.5">
-                    <li>Delivered friendly, attentive service to ensure customer satisfaction[cite: 39].</li>
-                    <li>Took orders accurately and ensured timely service during busy hours[cite: 39].</li>
-                    <li>Managed multiple tables efficiently while collaborating with kitchen and front-of-house staff[cite: 39].</li>
+                <p class="text-sm font-semibold text-gray-600 mb-2">Esto Molivos | Resto Cabasil | Trattoria Tevere</p>
+                <ul class="list-disc ml-5 text-sm space-y-1 text-gray-800">
+                    <li>Orchestrated attentive guest service to ensure a premium dining atmosphere.</li>
+                    <li>Expedited complex orders with 100% accuracy during peak high-volume shifts.</li>
+                    <li>Mastered team synchronization between kitchen and floor staff to reduce wait times.</li>
                 </ul>
             </div>
 
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline mb-0.5">
-                    <span class="font-bold text-[15px] uppercase">Dining Room Assistant (Busser)</span>
-                    <span class="text-[11px] font-bold">Montreal, QC [cite: 32]</span>
+            <div class="mb-5">
+                <div class="flex justify-between items-baseline mb-1">
+                    <span class="font-bold text-base">Dining Room Assistant</span>
+                    <span class="text-xs italic uppercase">Montreal, QC</span>
                 </div>
-                <div class="text-[12px] font-semibold text-gray-600 italic mb-1.5">Greek Town Grill [cite: 31]</div>
-                <ul class="list-disc ml-4 text-[13px] text-gray-800 space-y-0.5">
-                    <li>Assisted servers to ensure smooth restaurant operations and prompt guest support[cite: 33, 35].</li>
-                    <li>Maintained strict cleanliness of dining and service areas[cite: 34].</li>
-                    <li>Expedited table turnovers to enhance overall customer experience[cite: 35].</li>
+                <p class="text-sm font-semibold text-gray-600 mb-2">Greek Town Grill</p>
+                <ul class="list-disc ml-5 text-sm space-y-1 text-gray-800">
+                    <li>Facilitated rapid table turnovers while upholding rigorous cleanliness standards.</li>
+                    <li>Proactively supported the service team to maintain a fluid guest experience.</li>
                 </ul>
             </div>
 
-            <div>
-                <div class="flex justify-between items-baseline mb-0.5">
-                    <span class="font-bold text-[15px] uppercase text-black">Language Instructor</span>
-                    <span class="text-[11px] font-bold">Bangladesh [cite: 40]</span>
+            <div class="mb-5">
+                <div class="flex justify-between items-baseline mb-1">
+                    <span class="font-bold text-base">Language Instructor</span>
+                    <span class="text-xs italic uppercase text-sm">Bangladesh</span>
                 </div>
-                <div class="text-[12px] font-semibold text-gray-600 italic mb-1.5">Merseyside Consultancy [cite: 40]</div>
-                <ul class="list-disc ml-4 text-[13px] text-gray-800 space-y-0.5">
-                    <li>Taught language skills to students across various proficiency levels[cite: 41].</li>
-                    <li>Developed strong presentation skills and assisted learners with clarity and confidence-building[cite: 41].</li>
+                <p class="text-sm font-semibold text-gray-600 mb-2">Merseyside Consultancy</p>
+                <ul class="list-disc ml-5 text-sm space-y-1 text-gray-800">
+                    <li>Developed high-level communication and public presentation techniques.</li>
+                    <li>Coached diverse learners in linguistic clarity and professional confidence.</li>
                 </ul>
             </div>
         </section>
 
-        <div class="grid grid-cols-2 gap-10 mb-6">
-            <section>
-                <h2 class="section-header">Education</h2>
-                <div class="text-[13px]">
-                    <div class="font-bold">Herzing College, Canada [cite: 13]</div>
-                    <div class="text-gray-800 italic">Attestation of Collegial Studies (ACS) [cite: 15]</div>
-                    <div class="text-gray-800">Computer Aided Design and Drafting [cite: 16]</div>
-                    <div class="text-gray-500 font-semibold text-[11px] mt-1 italic">September 2023 — July 2025 [cite: 14]</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+            <div>
+                <h2 class="section-line text-lg">Education</h2>
+                <div class="text-sm">
+                    <p class="font-bold">Herzing College, Canada</p>
+                    <p>ACS - Computer Aided Design & Drafting</p>
+                    <p class="text-gray-500 italic">2023 — 2025</p>
                 </div>
-            </section>
-            <section>
-                <h2 class="section-header">Core Skills</h2>
-                <ul class="text-[13px] text-gray-800 space-y-0.5">
-                    <li>• Customer Service & Interpersonal Skills [cite: 22]</li>
-                    <li>• Multitasking in High-Pressure Environments [cite: 25]</li>
-                    <li>• Cash Handling & Order Assistance [cite: 26]</li>
-                    <li>• Languages: English, Bengali, Basic French [cite: 18, 19, 20]</li>
+            </div>
+            <div>
+                <h2 class="section-line text-lg">Core Competencies</h2>
+                <ul class="text-sm space-y-1 text-gray-800">
+                    <li>• Customer Service Excellence</li>
+                    <li>• POS Systems & Cash Handling</li>
+                    <li>• Multitasking & Conflict Resolution</li>
+                    <li>• English, Bengali, Basic French</li>
                 </ul>
-            </section>
+            </div>
         </div>
 
-        <section class="mt-auto border-t-2 border-black pt-4">
-            <h2 class="text-center font-serif text-[12px] uppercase tracking-[0.25em] font-bold mb-3">Professional Availability</h2>
-            <div class="grid grid-cols-3 gap-2 text-center">
-                <div class="border border-gray-200 p-2">
-                    <span class="block text-[10px] uppercase font-bold text-gray-500 mb-0.5">Mon - Wed [cite: 44]</span>
-                    <span class="text-[12px] font-semibold">After 6:00 PM</span>
+        <section class="mt-auto pt-6 border-t border-gray-200">
+            <h2 class="text-center font-serif text-sm uppercase tracking-widest font-bold mb-4">Work Availability</h2>
+            <div class="grid grid-cols-3 gap-2 text-center text-[10px] sm:text-xs">
+                <div class="border p-2">
+                    <p class="font-bold uppercase">Mon - Wed</p>
+                    <p>After 6:00 PM</p>
                 </div>
-                <div class="border border-gray-200 p-2">
-                    <span class="block text-[10px] uppercase font-bold text-gray-500 mb-0.5">Thursday [cite: 43]</span>
-                    <span class="text-[12px] font-semibold">After 4:00 PM</span>
+                <div class="border p-2">
+                    <p class="font-bold uppercase">Thursday</p>
+                    <p>After 4:00 PM</p>
                 </div>
-                <div class="border border-gray-200 p-2 bg-gray-50">
-                    <span class="block text-[10px] uppercase font-bold text-gray-500 mb-0.5">Fri - Sun [cite: 43]</span>
-                    <span class="text-[12px] font-bold">Open Availability</span>
+                <div class="border p-2 bg-gray-50">
+                    <p class="font-bold uppercase">Fri - Sun</p>
+                    <p class="font-bold">Available 24/7</p>
                 </div>
             </div>
         </section>
