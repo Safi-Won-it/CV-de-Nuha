@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=8.5in, initial-scale=1.0">
     <title>Maimun_Nahar_Nuha_Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -12,19 +12,25 @@
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
+            color: #000000;
         }
 
         .resume-container {
             background: white;
-            width: 95%;
-            max-width: 8.5in;
-            margin: 20px auto;
+            width: 8.5in;
+            height: 11in;
+            margin: 10px auto;
             padding: 0.5in 0.7in;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            min-height: 11in;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            justify-content: space-between; /* This fills the bottom gap */
+            overflow: hidden;
+        }
+
+        h1, h2, h3, p, li, span {
+            color: #000000 !important;
         }
 
         h1, h2 {
@@ -32,27 +38,13 @@
         }
 
         .section-header {
-            border-bottom: 2px solid #000;
+            border-bottom: 1px solid #000;
             margin-bottom: 10px;
             padding-bottom: 2px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
-        }
-
-        @media print {
-            @page { size: letter; margin: 0; }
-            body { background: white !important; padding: 0 !important; }
-            .no-print { display: none !important; }
-            .resume-container {
-                width: 8.5in !important;
-                height: 11in !important;
-                margin: 0 !important;
-                padding: 0.5in 0.75in !important;
-                box-shadow: none !important;
-                display: block !important;
-            }
         }
 
         .print-btn {
@@ -60,13 +52,40 @@
             bottom: 20px;
             right: 20px;
             background: #000;
-            color: #fff;
-            padding: 12px 24px;
+            color: #fff !important;
+            padding: 10px 20px;
             border-radius: 50px;
             font-weight: 600;
             z-index: 1000;
             cursor: pointer;
             border: none;
+        }
+
+        @media print {
+            @page { 
+                size: letter; 
+                margin: 0; 
+            }
+            body { background: white !important; padding: 0 !important; }
+            .no-print { display: none !important; }
+            .resume-container {
+                width: 8.5in !important;
+                height: 11in !important;
+                margin: 0 !important;
+                padding: 0.5in 0.7in !important;
+                box-shadow: none !important;
+                display: flex !important;
+            }
+        }
+
+        @media (max-width: 8.5in) {
+            .resume-container {
+                width: 100%;
+                height: auto;
+                min-height: 11in;
+                margin: 0;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -75,102 +94,113 @@
     <button class="print-btn no-print" onclick="window.print()">Print to PDF</button>
 
     <div class="resume-container">
-        <header class="text-center mb-6">
-            <h1 class="text-4xl sm:text-5xl font-bold mb-2">MAIMUN NAHAR NUHA</h1>
-            <div class="flex flex-wrap justify-center gap-3 text-xs font-medium text-gray-700 uppercase tracking-tighter">
-                <span>Scarborough, Toronto</span>
-                <span>•</span>
-                <span>438-921-4887</span>
-                <span>•</span>
-                <span>mnaharnuha@gmail.com</span>
-            </div>
-        </header>
-
-        <section class="mb-6">
-            <h2 class="section-header">Professional Profile</h2>
-            <p class="text-[13.5px] leading-snug text-gray-800">
-                Poised and adaptable hospitality professional with a dedicated focus on the Canadian guest experience. 
-                Proven ability to maintain professional maturity and efficiency in high-pressure, fast-paced environments. 
-                Expert at orchestrating seamless service and delivering exceptional multitasking within top-tier 
-                service establishments.
-            </p>
-        </section>
-
-        <section class="mb-6">
-            <h2 class="section-header">Professional Experience</h2>
-            
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-base uppercase">Food & Beverage Server</h3>
-                    <span class="text-[10px] font-bold text-gray-500">MONTREAL, QC</span>
+        <div>
+            <header class="text-center mb-8">
+                <h1 class="text-5xl font-bold mb-2">MAIMUN NAHAR NUHA</h1>
+                <div class="flex justify-center gap-4 text-[13px] font-medium uppercase tracking-tight">
+                    <span>Scarborough, Toronto</span>
+                    <span>•</span>
+                    <span>438-921-4887</span>
+                    <span>•</span>
+                    <span>mnaharnuha@gmail.com</span>
                 </div>
-                <p class="text-xs font-semibold text-gray-600 mb-1 italic">Esto Molivos | Resto Cabasil | Trattoria Tevere</p>
-                <ul class="list-disc ml-5 text-[13px] space-y-0.5 text-gray-800">
-                    <li>Orchestrated attentive guest service to ensure a premium dining atmosphere.</li>
-                    <li>Expedited complex orders with precision during peak service windows.</li>
-                    <li>Mastered team synchronization to optimize service flow and guest satisfaction.</li>
-                </ul>
-            </div>
+            </header>
 
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-base uppercase">Dining Room Assistant</h3>
-                    <span class="text-[10px] font-bold text-gray-500">MONTREAL, QC</span>
+            <section class="mb-8">
+                <h2 class="section-header">Professional Profile</h2>
+                <p class="text-[14px] leading-relaxed">
+                    Poised and adaptable hospitality professional with a dedicated focus on the Canadian guest experience. 
+                    Proven ability to maintain professional maturity and efficiency in high-pressure environments. 
+                    Expert at orchestrating seamless service and delivering exceptional multitasking within top-tier 
+                    service establishments.
+                </p>
+            </section>
+
+            <section class="mb-8">
+                <h2 class="section-header">Professional Experience</h2>
+                
+                <div class="mb-5">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="font-bold text-[15px] uppercase text-black">Food & Beverage Server</h3>
+                        <span class="text-[11px] font-bold">MONTREAL, QC</span>
+                    </div>
+                    <p class="text-[12px] font-semibold mb-1.5 italic">Esto Molivos | Resto Cabasil | Trattoria Tevere</p>
+                    <ul class="list-disc ml-5 text-[14px] space-y-1">
+                        <li>Orchestrated attentive guest service to ensure a premium dining atmosphere.</li>
+                        <li>Expedited complex orders with precision during peak high-volume service windows.</li>
+                        <li>Mastered team synchronization to optimize service flow and guest satisfaction.</li>
+                    </ul>
                 </div>
-                <p class="text-xs font-semibold text-gray-600 mb-1 italic">Greek Town Grill</p>
-                <ul class="list-disc ml-5 text-[13px] space-y-0.5 text-gray-800">
-                    <li>Facilitated rapid table turnovers while upholding rigorous cleanliness standards.</li>
-                    <li>Proactively supported the service team to maintain a fluid guest experience.</li>
-                </ul>
-            </div>
 
-            <div>
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-bold text-base uppercase">Language Instructor</h3>
-                    <span class="text-[10px] font-bold text-gray-500">BANGLADESH</span>
+                <div class="mb-5">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="font-bold text-[15px] uppercase">Dining Room Assistant</h3>
+                        <span class="text-[11px] font-bold">MONTREAL, QC</span>
+                    </div>
+                    <p class="text-[12px] font-semibold mb-1.5 italic">Greek Town Grill</p>
+                    <ul class="list-disc ml-5 text-[14px] space-y-1">
+                        <li>Facilitated rapid table turnovers while upholding rigorous cleanliness standards.</li>
+                        <li>Proactively supported the service team to maintain a fluid guest experience.</li>
+                    </ul>
                 </div>
-                <p class="text-xs font-semibold text-gray-600 mb-1 italic">Merseyside Consultancy</p>
-                <ul class="list-disc ml-5 text-[13px] space-y-0.5 text-gray-800">
-                    <li>Developed high-level communication and public presentation techniques.</li>
-                    <li>Coached diverse learners in linguistic clarity and professional confidence.</li>
-                </ul>
-            </div>
-        </section>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            <section>
-                <h2 class="section-header">Education</h2>
-                <div class="text-[13px]">
-                    <p class="font-bold">Herzing College, Canada</p>
-                    <p>ACS — Computer Aided Design & Drafting</p>
-                    <p class="text-gray-500 italic">Expected 2025</p>
+                <div>
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="font-bold text-[15px] uppercase">Language Instructor</h3>
+                        <span class="text-[11px] font-bold">BANGLADESH</span>
+                    </div>
+                    <p class="text-[12px] font-semibold mb-1.5 italic">Merseyside Consultancy</p>
+                    <ul class="list-disc ml-5 text-[14px] space-y-1">
+                        <li>Developed high-level communication and public presentation techniques.</li>
+                        <li>Coached diverse learners in linguistic clarity and professional confidence.</li>
+                    </ul>
                 </div>
             </section>
-            <section>
-                <h2 class="section-header">Core Competencies</h2>
-                <ul class="text-[13px] space-y-0.5 text-gray-800">
-                    <li>• Customer Service Excellence</li>
-                    <li>• POS Systems & Cash Management</li>
-                    <li>• Multitasking & Conflict Resolution</li>
-                    <li>• English, Bengali, Basic French</li>
-                </ul>
-            </section>
+
+            <div class="grid grid-cols-2 gap-x-12 gap-y-6 mb-8">
+                <section>
+                    <h2 class="section-header">Education</h2>
+                    <div class="text-[14px]">
+                        <p class="font-bold">Herzing College, Canada</p>
+                        <p>ACS — Computer Aided Design & Drafting</p>
+                        <p class="italic text-[12px]">September 2023 — July 2025</p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="section-header">Core Competencies</h2>
+                    <ul class="text-[14px] space-y-1">
+                        <li>• Customer Service & Interpersonal Excellence</li>
+                        <li>• POS Systems & Cash Management</li>
+                        <li>• Multitasking & Conflict Resolution</li>
+                    </ul>
+                </section>
+                <section class="col-span-2">
+                    <h2 class="section-header">Languages</h2>
+                    <div class="text-[14px] flex gap-8">
+                        <span><strong>English:</strong> Fluent</span>
+                        <span><strong>Bengali:</strong> Native</span>
+                        <span><strong>French:</strong> Basic</span>
+                    </div>
+                </section>
+            </div>
         </div>
 
-        <section class="mt-auto pt-4 border-t-2 border-black">
-            <h2 class="text-center font-serif text-[12px] uppercase tracking-[0.2em] font-bold mb-3">Work Availability</h2>
-            <div class="grid grid-cols-3 gap-2">
-                <div class="border border-gray-200 py-1.5 px-1 text-center">
-                    <p class="text-[9px] uppercase font-bold text-gray-400 leading-tight">Mon - Wed</p>
-                    <p class="text-[11px] font-semibold">After 6:00 PM</p>
+        <section class="pb-2">
+            <h2 class="section-header">Work Availability</h2>
+            <div class="flex justify-between text-[14px] border-t border-black pt-3 px-2">
+                <div>
+                    <span class="font-bold uppercase text-[11px] block mb-1">Mon - Wed</span>
+                    <span>After 6:00 PM</span>
                 </div>
-                <div class="border border-gray-200 py-1.5 px-1 text-center">
-                    <p class="text-[9px] uppercase font-bold text-gray-400 leading-tight">Thursday</p>
-                    <p class="text-[11px] font-semibold">After 4:00 PM</p>
+                <div class="border-l border-gray-300 h-10"></div>
+                <div>
+                    <span class="font-bold uppercase text-[11px] block mb-1">Thursday</span>
+                    <span>After 4:00 PM</span>
                 </div>
-                <div class="border border-black py-1.5 px-1 text-center bg-gray-50">
-                    <p class="text-[9px] uppercase font-bold text-black leading-tight">Fri - Sun</p>
-                    <p class="text-[11px] font-bold">Open 24/7</p>
+                <div class="border-l border-gray-300 h-10"></div>
+                <div>
+                    <span class="font-bold uppercase text-[11px] block mb-1">Fri - Sun</span>
+                    <span class="font-bold">Open Availability (24/7)</span>
                 </div>
             </div>
         </section>
